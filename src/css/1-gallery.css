@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  transition: transform 250ms linear;
+}
+
+.gallery-image:hover {
+  transform: scale(1.04);
+}
+
+.sl-wrapper {
+  background-color: rgba(46, 47, 66, 0.8);
+}
