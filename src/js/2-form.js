@@ -16,9 +16,13 @@ function onFormInput() {
 
 function onBtnClick(e) {
   e.preventDefault();
-  console.log(loadFromLS(STORAGE_KEY));
-  localStorage.removeItem(STORAGE_KEY);
-  form.reset();
+  const inputValue = form.elements.email.value.trim();
+  const textareaValue = form.elements.message.value.trim();
+  if (inputValue !== '' && textareaValue !== '') {
+    console.log(loadFromLS(STORAGE_KEY));
+    localStorage.removeItem(STORAGE_KEY);
+    form.reset();
+  }
 }
 
 function getData() {
